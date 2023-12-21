@@ -107,6 +107,23 @@ public:
 	};
 };
 
+class HyundaiGetzFactory : public CarFactory {
+public:
+	void BuildBody() override {
+		car.SetBody("Hatchback");
+	};
+	void BuildEngine() {
+		car.SetEnginePower(66);
+	};
+	void BuildWheel() {
+		car.SetWheelRadius(13);
+	};
+	void BuildGearbox() {
+		car.SetNumOfTransmissions(4);
+		car.SetTypeOfTransmission("Auto");
+	};
+};
+
 class Shop {
 	CarFactory* carFactory;
 public:
